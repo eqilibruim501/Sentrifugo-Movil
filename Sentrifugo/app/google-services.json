@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "409148155492",
+    "firebase_url": "https://sentrifugo-78b30.firebaseio.com",
+    "project_id": "sentrifugo-78b30",
+    "storage_bucket": "sentrifugo-78b30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409148155492:android:d7570a331dd8fec4",
+        "android_client_info": {
+          "package_name": "com.example.frive.sentrifugo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409148155492-v9vvdtprhr3jimpcetal102626fdh6jk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkZ_SO0pfRwlHcYx4iAw2_nvNFaWJTR0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

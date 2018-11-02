@@ -74,15 +74,17 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
-    private void registrar(String email, final String pass){
+    private void registrar(final String email, final String pass){
         //registra en firebase
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     // Log.i("seccion","se creo bien");
-                    //Intent intent=new Intent(MainActivity.this,PaseadoresListview.class);
-                   // startActivity(intent);
+                    Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
+                    String correo=email;
+                    intent.putExtra("correo",correo);
+                   startActivity(intent);
                     Toast.makeText(MainActivity.this,"Registro",Toast.LENGTH_LONG).show();
 
                 }else{
@@ -94,27 +96,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void iniciar(String email, String pass){
+    private void iniciar(final String email, String pass){
         //inicia con firebase
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,pass).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //Log.i("seccion","inicio");
-                  //  Intent intent=new Intent(MainActivity.this,PaseadoresListview.class);
-                   // startActivity(intent);
-                    /* Intent intent = new Intent(PaseadoresListview.this,InfoPaseadores.class);
-                Paseador paseador=listapaseadores.get(position);
-                intent.putExtra("Nombre",paseador.getNombre());
-                intent.putExtra("Edad",paseador.getEdad());
-                intent.putExtra("Experiencia",paseador.getExperiencia());
-                intent.putExtra("Url",paseador.getUrl());
-                intent.putExtra("X",paseador.getX());
-                intent.putExtra("Y",paseador.getY());
-                intent.putExtra("Correo",paseador.getCorreo());
-                intent.putExtra("Telefono",paseador.getTelefono());
-
-                startActivity(intent);*/
+                   Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
+                    intent.putExtra("correo",email);
+                   startActivity(intent);
                     Toast.makeText(MainActivity.this,"Inicio",Toast.LENGTH_LONG).show();
 
                 }else{
