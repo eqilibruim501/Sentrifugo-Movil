@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <RelativeLayout
+        tools:context=".PedirVaciones"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="Nombre:"
+                android:inputType="textPersonName"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:id="@+id/Nombre"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="Dias:"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/Dias"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="Motivo:"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/Motivo"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/bfecha"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/calendar"
+                    android:layout_weight="1"/>
+
+                <EditText android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:hint="Fecha:"
+                    android:inputType="textPersonName"
+                    android:ems="10" android:id="@+id/efecha"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+
+            <Button android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:id="@+id/solicitud"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Enviar" />
+            <Button android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:id="@+id/Regresar"
+                android:text="Regresar" />
+
+        </LinearLayout>
+
+    </RelativeLayout>

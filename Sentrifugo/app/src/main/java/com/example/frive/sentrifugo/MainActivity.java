@@ -103,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //Log.i("seccion","inicio");
-                   Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
+                  // Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
+                    Intent intent=new Intent(MainActivity.this,PedirVaciones.class);
                     intent.putExtra("correo",email);
                    startActivity(intent);
                     Toast.makeText(MainActivity.this,"Inicio",Toast.LENGTH_LONG).show();
