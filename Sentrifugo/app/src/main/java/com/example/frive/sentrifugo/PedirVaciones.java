@@ -80,7 +80,7 @@ public class PedirVaciones extends AppCompatActivity {
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(PedirVaciones.this,MenuInicio.class);
+                Intent intent=new Intent(PedirVaciones.this,MainActivity.class);
 
                 startActivity(intent);
             }

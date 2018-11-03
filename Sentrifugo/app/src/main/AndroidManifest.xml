@@ -23,8 +23,7 @@
             android:name=".DatosUsuario"
             android:label="@string/title_activity_datos_usuario"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PedirVaciones" />
-        <activity android:name=".MenuInicio"></activity>
+        <activity android:name=".PedirVaciones"></activity>
     </application>
 
 </manifest>

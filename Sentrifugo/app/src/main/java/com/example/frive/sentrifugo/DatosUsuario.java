@@ -64,8 +64,8 @@ public class DatosUsuario extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                    Usuario usuario = snapshot.getValue(Usuario.class);
-                    if(usuario == null){
+                    Usuario usuario =snapshot.getValue(Usuario.class);
+                    if(usuario==null){
                         Log.d("estoEntro2","nulo");
                     }else{
                         if(CorreoUsuario.equals(usuario.getCorreo())) {
