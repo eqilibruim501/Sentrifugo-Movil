@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 //valida inicio
-                FirebaseUser usuario=firebaseAuth.getCurrentUser();
+                FirebaseUser usuario = firebaseAuth.getCurrentUser();
                 if(usuario!=null){
                     //inicio seccion
                     // Log.i("Seccion","inicio"+usuario.getEmail());
@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     // Log.i("seccion","se creo bien");
-                    Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
+                    Intent intent=new Intent(MainActivity.this, MenuInicio.class);
                     String correo=email;
                     intent.putExtra("correo",correo);
-                   startActivity(intent);
+                    startActivity(intent);
                     Toast.makeText(MainActivity.this,"Registro",Toast.LENGTH_LONG).show();
 
                 }else{
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     //Log.i("seccion","inicio");
                   // Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
                     Intent intent=new Intent(MainActivity.this, MenuInicio.class);
-                    intent.putExtra("correo",email);
+                    intent.putExtra("correo", email);
 
                     startActivity(intent);
                     Toast.makeText(MainActivity.this,"Inicio",Toast.LENGTH_LONG).show();
