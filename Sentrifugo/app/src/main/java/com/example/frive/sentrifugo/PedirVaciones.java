@@ -80,8 +80,8 @@ public class PedirVaciones extends AppCompatActivity {
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(PedirVaciones.this,MainActivity.class);
-
+                Intent intent=new Intent(PedirVaciones.this,MenuInicio.class);
+                intent.putExtra("correo",Correo);
                 startActivity(intent);
             }
         });
@@ -112,7 +112,8 @@ public class PedirVaciones extends AppCompatActivity {
                     motivo.setText("");
 
                 }else{
-                    Toast.makeText(PedirVaciones.this,"No deje ningun espacio en blanco, el nombre debe ser menor a 10 caracteres y el numero menor o igual a 8 digitos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PedirVaciones.this,"No deje ningun espacio en blanco, " +
+                            "el nombre debe ser menor a 10 caracteres, debe de ingresar motivo y dias", Toast.LENGTH_LONG).show();
                 }
             }
         });

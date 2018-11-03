@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         correo=(EditText) findViewById(R.id.correo);
         passw=(EditText) findViewById(R.id.password2);
         entrar=(Button) findViewById(R.id.entrar);
-        registrar=(Button) findViewById(R.id.registrar);
+       /* registrar=(Button) findViewById(R.id.registrar);*/
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        registrar.setOnClickListener(new View.OnClickListener() {
+      /*  registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //registra
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"LLene todos los campos",Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        });*/
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
-    private void registrar(final String email, final String pass){
+    /*private void registrar(final String email, final String pass){
         //registra en firebase
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
             @Override
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
     private void iniciar(final String email, String pass){
         //inicia con firebase
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,pass).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     //Log.i("seccion","inicio");
                   // Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
-                    Intent intent=new Intent(MainActivity.this,PedirVaciones.class);
+                    Intent intent=new Intent(MainActivity.this,MenuInicio.class);
                     intent.putExtra("correo",email);
                    startActivity(intent);
                     Toast.makeText(MainActivity.this,"Inicio",Toast.LENGTH_LONG).show();

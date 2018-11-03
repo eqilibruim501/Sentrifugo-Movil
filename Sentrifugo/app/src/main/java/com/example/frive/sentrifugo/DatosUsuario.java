@@ -55,8 +55,8 @@ public class DatosUsuario extends AppCompatActivity {
         Regresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DatosUsuario.this, MainActivity.class);
-
+                Intent intent=new Intent(DatosUsuario.this, MenuInicio.class);
+                intent.putExtra("correo",CorreoUsuario);
                 startActivity(intent);
             }
         });
