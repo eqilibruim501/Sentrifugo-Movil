@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         passw=(EditText) findViewById(R.id.password2);
         entrar=(Button) findViewById(R.id.entrar);
         registrar=(Button) findViewById(R.id.registrar);
+
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("estoEntro","entro");
                     registrar(correo.getText().toString(), passw.getText().toString());
                 }else{
-                    Toast.makeText(MainActivity.this,"LLene todos los campos",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Llene todos los campos",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -104,9 +105,10 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     //Log.i("seccion","inicio");
                   // Intent intent=new Intent(MainActivity.this,DatosUsuario.class);
-                    Intent intent=new Intent(MainActivity.this,PedirVaciones.class);
+                    Intent intent=new Intent(MainActivity.this, MenuInicio.class);
                     intent.putExtra("correo",email);
-                   startActivity(intent);
+
+                    startActivity(intent);
                     Toast.makeText(MainActivity.this,"Inicio",Toast.LENGTH_LONG).show();
 
                 }else{
