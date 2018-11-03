@@ -53,7 +53,7 @@ public class MenuInicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //modificar al tener la ventana de viaticos
-                Intent intent=new Intent(MenuInicio.this, PedirVaciones.class);
+                Intent intent=new Intent(MenuInicio.this, Proyectos_ListView.class);
                 intent.putExtra("correo",email);
                 startActivity(intent);
             }

@@ -104,7 +104,7 @@ public class PedirVaciones extends AppCompatActivity {
                                     efecha.getText().toString(), dia,
                                     motivo.getText().toString(),Correo);
                     myRef.child(Referencias.Vacacion).push().setValue(vacacion);
-                    Toast.makeText(PedirVaciones.this,"La solicitud se saco correctamente", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PedirVaciones.this,"La solicitud se envio correctamente", Toast.LENGTH_LONG).show();
 
                     nombre.setText("");
                     efecha.setText("");

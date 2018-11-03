@@ -24,7 +24,9 @@
             android:label="@string/title_activity_datos_usuario"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PedirVaciones" />
-        <activity android:name=".MenuInicio"></activity>
+        <activity android:name=".MenuInicio" />
+        <activity android:name=".Proyectos_ListView" />
+        <activity android:name=".Viaticos"></activity>
     </application>
 
 </manifest>
